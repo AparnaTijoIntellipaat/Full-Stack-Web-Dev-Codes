@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box, #boxParent, #boxChild{
+            border: 2px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Box => Parent => Child -->
+
+    <div id="box">
+        <div id="boxParent">
+            <div id="boxChild">
+                Child
+            </div>
+            Parent
+        </div>
+        Box
+    </div>
+
+    <script>
+        const box = document.getElementById('box')
+        const boxParent = document.getElementById('boxParent')
+        const boxChild = document.getElementById('boxChild')
+        box.addEventListener('click', () => {
+            console.log("Box has been clicked");
+        }, true);
+        boxParent.addEventListener('click', () => {
+            console.log("Parent has been clicked");
+        }, true);
+        boxChild.addEventListener('click', () => {
+            console.log("Child has been clicked");
+        }, true);
+    </script>
+</body>
+</html>
